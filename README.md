@@ -36,7 +36,7 @@ bkit implements Context Engineering through three interconnected layers:
 
 | Layer | Components | Purpose |
 |-------|------------|---------|
-| **Domain Knowledge** | 21 Skills | Structured expert knowledge (phases, levels, specialized domains) |
+| **Domain Knowledge** | 24 Skills | Structured expert knowledge (phases, levels, specialized domains, engineering discipline) |
 | **Behavioral Rules** | 11 Agents | Role-based constraints with model selection (opus/sonnet/haiku) |
 | **State Management** | 86+ Functions | PDCA status, intent detection, ambiguity scoring, multi-feature context |
 
@@ -69,11 +69,39 @@ Layer 5: Scripts (39 modules)    → Actual Node.js execution logic with unified
 - **9-Stage Development Pipeline** - From schema design to deployment
 - **3 Project Levels** - Starter (static), Dynamic (fullstack), Enterprise (microservices)
 - **Multilingual Support** - 8 languages (EN, KO, JA, ZH, ES, FR, DE, IT)
-- **21 Skills** - Domain-specific knowledge for various development scenarios
+- **24 Skills** - Domain-specific knowledge for various development scenarios
 - **11 Agents** - Specialized AI assistants for different tasks
 - **39 Scripts** - Hook execution with unified handlers (hooks-json-integration)
 - **132 Utility Functions** - 4 modular libraries with state management, intent detection, task tracking
 - **Check-Act Iteration Loop** - Automatic gap analysis and fix cycles with max 5 iterations (90% threshold)
+- **Engineering Discipline Skills** - TDD, systematic debugging, and evidence-based verification (integrated from superpowers)
+
+---
+
+## Engineering Discipline Skills
+
+Three engineering discipline skills have been integrated from the [superpowers](https://github.com/obra/superpowers) plugin, filling gaps not covered by bkit's PDCA workflow:
+
+| Skill | Purpose | Key Principle |
+|-------|---------|---------------|
+| **[verification-before-completion](skills/verification-before-completion/SKILL.md)** | Evidence-based completion verification with bkit PDCA integration | No completion claims without fresh verification evidence |
+| **[systematic-debugging](skills/systematic-debugging/SKILL.md)** | 4-phase root cause investigation methodology | Always find root cause before attempting fixes |
+| **[test-driven-development](skills/test-driven-development/SKILL.md)** | Red-Green-Refactor TDD cycle enforcement | No production code without a failing test first |
+
+### How They Integrate with bkit PDCA
+
+```
+Plan → Design → Do → Check → Act → Report
+                  ↑      ↑      ↑
+                  TDD    Verification + Gap Detector
+                  |      (evidence before claims)
+                  Systematic Debugging
+                  (when bugs found)
+```
+
+- **verification-before-completion**: Enforces running actual verification commands (build, test, gap-detector) before claiming any PDCA phase is complete
+- **systematic-debugging**: Applies when bugs are encountered during Do/Check phases - prevents random fix attempts
+- **test-driven-development**: Complements bkit's zero-script-qa with traditional TDD for code-level testing
 
 ---
 
@@ -324,7 +352,7 @@ bkit is **primarily designed for software development**. However, some component
 ### Component Reference
 
 - [Development Pipeline](skills/development-pipeline/SKILL.md) - 9-stage pipeline skill
-- [Skills Reference](skills/) - 22 domain skills (Commands deprecated in v1.4.4)
+- [Skills Reference](skills/) - 24 domain skills (Commands deprecated in v1.4.4)
 - [Agents Reference](agents/) - 11 specialized agents
 
 ### PDCA Documents
