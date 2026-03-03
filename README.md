@@ -460,3 +460,5 @@ You must include the [NOTICE](NOTICE) file in any redistribution.
 ---
 
 Made with AI by [POPUP STUDIO](https://popupstudio.ai)
+
+Engineering Discipline Skills (systematic-debugging, test-driven-development, verification-before-completion) are derived from [superpowers](https://github.com/obra/superpowers) by Jesse Vincent, licensed under MIT.
